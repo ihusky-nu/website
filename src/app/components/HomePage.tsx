@@ -23,7 +23,7 @@ const HomePage = () => {
         className="flex justify-center w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.0 }}
       >
         <div className="flex justify-center items-center md:items-end w-[80%] p-4 mt-6 border-[5px] border-black rounded-lg bg-black">
           <img src="./images/animated.gif" />
@@ -35,7 +35,7 @@ const HomePage = () => {
         className="flex flex-col md:flex-row justify-between items-start md:items-end w-full p-8 mt-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
         <h1 className="font-bold text-4xl">Learn Swift and SwiftUI.</h1>
@@ -48,7 +48,7 @@ const HomePage = () => {
           className="grid grid-cols-1 md:flex md:overflow-x-auto md:space-x-6 gap-6 p-4 items-center mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
         >
           {[
