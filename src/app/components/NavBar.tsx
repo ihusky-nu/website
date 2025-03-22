@@ -1,7 +1,7 @@
 const NavBar = () => {
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-white-900">
+      <nav className="bg-[rgba(250,250,252,0.92)]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
@@ -35,11 +35,11 @@ const NavBar = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-light flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-white-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white-800 md:dark:bg-white-900 dark:border-gray-700">
+            <ul className="font-light flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-black rounded-sm md:p-0"
+                  className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                   aria-current="page"
                 >
                   Home
@@ -48,15 +48,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-black rounded-sm md:p-0"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-black rounded-sm md:p-0"
+                  className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Schedule
                 </a>
@@ -64,7 +56,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-black rounded-sm md:p-0"
+                  className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Workshops
                 </a>
@@ -72,7 +64,15 @@ const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-black rounded-sm md:p-0"
+                  className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
+                >
+                  Officers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Contact
                 </a>
