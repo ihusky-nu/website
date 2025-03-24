@@ -3,6 +3,9 @@
 :root {
   --background: #171717;
   --foreground: #ffffff;
+  --fc-event-border-color: rgb(156, 156, 156);
+  --fc-button-bg-color: rgb(29, 29, 31);
+  --fc-button-border-color: rgb(0, 0, 0);
 }
 
 @theme inline {
@@ -23,4 +26,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+.fc-today-button {
+  background-color: rgb(29, 29, 31) !important;
+  padding: 0.5rem 1rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
+  text-transform: capitalize !important;
+}
+
+.fc-today-button:disabled {
+  background-color: rgb(87, 87, 87) !important;
+  border: none !important;
+}
+
+.fc-toolbar-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
+}
+
+.fc-day-today {
+  background-color: rgb(
+    175,
+    223,
+    247
+  ) !important; /* Change this to your desired color */
+  color: black !important; /* Adjust text color for contrast */
+}
+
+.fc-daygrid-event-harness .past-event {
+  text-decoration: line-through !important;
+  opacity: 0.6 !important;
+}
+
+@media (max-width: 768px) {
+  .fc-toolbar-title {
+    padding-left: 1% !important;
+    font-size: medium !important; /* Smaller size on mobile */
+  }
+}
+
+.fc-dayGridMonth-view .fc-view .fc-daygrid .fc-scrollgrid {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
 }

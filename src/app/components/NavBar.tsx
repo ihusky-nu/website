@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,10 +60,10 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="/schedule"
+                  href="/events"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
-                  Schedule
+                  Events
                 </a>
               </li>
               <li>
