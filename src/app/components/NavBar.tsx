@@ -1,4 +1,10 @@
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <nav className="bg-[rgba(250,250,252,0.92)]">
@@ -10,12 +16,13 @@ const NavBar = () => {
               alt="iHusky Logo"
             />
           </a>
+          {/* Hamburger Menu Button */}
           <button
-            data-collapse-toggle="navbar-default"
+            onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
             aria-controls="navbar-default"
-            aria-expanded="false"
+            aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -27,18 +34,25 @@ const NavBar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+
+          {/* Mobile Menu */}
+          <div
+            className={`w-full md:block md:w-auto ${
+              isOpen ? "block" : "hidden"
+            }`}
+            id="navbar-default"
+          >
             <ul className="font-light flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                   aria-current="page"
                 >
