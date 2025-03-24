@@ -1,10 +1,12 @@
-"use client"; // Required for animations to work in Next.js App Router
+"use client";
 
 import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
 
 const HomePage = () => {
   return (
     <div id="home">
+      <NavBar />
       {/* Header Section */}
       <motion.div
         className="flex flex-col md:flex-row justify-between items-start md:items-end w-full p-8 mt-6"
@@ -12,8 +14,10 @@ const HomePage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="font-bold text-5xl">iHusky</h1>
-        <h1 className="font-bold text-xl">
+        <h1 className="font-bold text-5xl" style={{ color: "rgb(29, 29, 31)" }}>
+          iHusky
+        </h1>
+        <h1 className="font-bold text-xl" style={{ color: "rgb(29, 29, 31)" }}>
           Northeastern's iOS Development Club.
         </h1>
       </motion.div>
@@ -38,7 +42,7 @@ const HomePage = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <h1 className="font-bold text-4xl">Learn Swift and SwiftUI.</h1>
+        <h1 className="font-bold text-4xl" style={{ color: "rgb(29, 29, 31)" }}>Learn Swift and SwiftUI.</h1>
       </motion.div>
 
       {/* iHusky Benefits Section (Responsive Cards) */}
@@ -59,6 +63,7 @@ const HomePage = () => {
           ].map((title, index) => (
             <motion.div
               key={index}
+              style={{ backgroundColor: "rgb(29, 29, 31)" }}
               className="bg-black rounded-2xl shadow-lg p-6 flex items-center justify-center text-white text-center transition-transform transform hover:scale-105 duration-300"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
