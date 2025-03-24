@@ -5,10 +5,13 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div id="navbar">
       <nav className="bg-[rgba(250,250,252,0.92)]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a
+            href="/home"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
             <img
               src="./images/ihusky-logo.png"
               className="h-8"
@@ -76,7 +79,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/officers"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Officers
