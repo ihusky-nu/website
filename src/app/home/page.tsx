@@ -1,10 +1,12 @@
 "use client"; // Required for animations to work in Next.js App Router
 
 import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
 
 const HomePage = () => {
   return (
     <div id="home">
+      <NavBar />
       {/* Header Section */}
       <motion.div
         className="flex flex-col md:flex-row justify-between items-start md:items-end w-full p-8 mt-6"

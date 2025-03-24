@@ -52,7 +52,7 @@ const NavBar = () => {
             <ul className="font-light flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
               <li>
                 <a
-                  href="/"
+                  href="/home"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                   aria-current="page"
                 >
@@ -61,7 +61,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/schedule"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Schedule
