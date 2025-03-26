@@ -2,6 +2,27 @@
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 
+const contactOptions = [
+  {
+    id: 1,
+    title: "Join our Slack",
+    image: "./images/slack.png",
+    link: "https://join.slack.com/t/ihusky-network/shared_invite/zt-2swv22htu-nhDLM1UoNh2tJrHJKH5kAw",
+  },
+  {
+    id: 2,
+    title: "Join our Mailing List",
+    image: "./images/mail.png",
+    link: "https://forms.gle/v5kwATcWE54Bduro6",
+  },
+  {
+    id: 3,
+    title: "Send us an Email",
+    image: "./images/email.png",
+    link: "mailto:ihuskynu@gmail.com",
+  },
+];
+
 const ContactPage = () => {
   return (
     <div id="contact-page">
@@ -29,65 +50,30 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Slack Card */}
-          <motion.a
-            href="https://join.slack.com/t/ihusky-network/shared_invite/zt-2swv22htu-nhDLM1UoNh2tJrHJKH5kAw"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full max-w-[350px] min-h-[450px] border border-gray-200 rounded-lg shadow-sm bg-[rgb(29,29,31)] text-white p-6 flex flex-col justify-between items-center transition-all cursor-pointer"
-          >
-            <div className="flex-grow flex items-center justify-center">
-              <img
-                src="./images/slack.png"
-                alt="Slack"
-                width="80"
-                height="80"
-              />
-            </div>
-            <h2 className="mt-auto font-semibold text-lg">Join our Slack</h2>
-          </motion.a>
-
-          {/* Mailing List Card */}
-          <motion.a
-            href="https://forms.gle/v5kwATcWE54Bduro6"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full max-w-[350px] min-h-[450px] border border-gray-200 rounded-lg shadow-sm bg-[rgb(29,29,31)] text-white p-6 flex flex-col justify-between items-center transition-all cursor-pointer"
-          >
-            <div className="flex-grow flex items-center justify-center">
-              <img
-                src="./images/mail.png"
-                alt="Mailing List"
-                width="80"
-                height="80"
-              />
-            </div>
-            <h2 className="mt-auto font-semibold text-lg">
-              Join our Mailing List
-            </h2>
-          </motion.a>
-
-          {/* Email Card */}
-          <motion.a
-            href="mailto:ihuskynu@gmail.com"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full max-w-[350px] min-h-[450px] border border-gray-200 rounded-lg shadow-sm bg-[rgb(29,29,31)] text-white p-6 flex flex-col justify-between items-center transition-all cursor-pointer"
-          >
-            <div className="flex-grow flex items-center justify-center">
-              <img
-                src="./images/email.png"
-                alt="Email Us"
-                width="80"
-                height="80"
-              />
-            </div>
-            <h2 className="mt-auto font-semibold text-lg">Send us an Email</h2>
-          </motion.a>
+          {contactOptions.map((option, index) => (
+            <motion.a
+              key={option.id}
+              href={option.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-[350px] min-h-[450px] border border-gray-200 rounded-lg shadow-sm bg-[rgb(29,29,31)] text-white p-6 flex flex-col justify-between items-center transition-all cursor-pointer"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="flex-grow flex items-center justify-center">
+                <img
+                  src={option.image}
+                  alt={option.title}
+                  width="80"
+                  height="80"
+                />
+              </div>
+              <h2 className="mt-auto font-semibold text-lg">{option.title}</h2>
+            </motion.a>
+          ))}
         </motion.div>
       </div>
     </div>
