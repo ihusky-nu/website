@@ -1,6 +1,4 @@
 "use client";
-import EventsPage from "./events/page";
-import OfficersPage from "./officers/page";
 import NavBar from "./components/NavBar";
 import { motion } from "framer-motion";
 
