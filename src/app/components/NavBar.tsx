@@ -87,7 +87,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contact"
                   className="block py-2 px-3 text-gray-700 hover:text-black md:p-0"
                 >
                   Contact
