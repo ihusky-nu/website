@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -75,6 +76,7 @@ const HomePage = () => {
           ))}
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
