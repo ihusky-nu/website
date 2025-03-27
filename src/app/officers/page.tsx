@@ -139,8 +139,8 @@ const OfficersPage = () => {
                 <h5 className="text-xl font-bold">{officer.name}</h5>
                 <p className="text-md text-gray-300">{officer.year}</p>
                 <p className="text-md text-gray-300">{officer.major}</p>
-                <p className="text-sm mt-3 text-gray-400 italic">
-                  "{officer.funFact}"
+                <p className="text-sm mt-3 text-gray-300">
+                  Fun Fact: {officer.funFact}
                 </p>
               </div>
             </motion.div>
