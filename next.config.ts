@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   output: "export",
-  trailingSlash: true, 
+  trailingSlash: true,
+  images: {
+    unoptimized: true, // Required for static export in Next.js on Netlify
+  },
 };
 
 export default nextConfig;
