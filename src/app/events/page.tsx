@@ -9,25 +9,24 @@ import Footer from "../components/Footer";
 const EventsPage = () => {
   const currentDate = new Date(); // Get today's date
 
-  // Sample event data (Replace with real event data)
   const events = [
     {
-      title: "iOS Workshop",
-      date: "March 1, 2025",
+      title: "Spotify UI Integration",
+      date: "March 21, 2025",
       startTime: "7:00 PM",
       endTime: "8:00 PM",
       location: "Shillman 135",
     },
     {
-      title: "SwiftUI Bootcamp",
-      date: "April 12, 2025",
+      title: "Spotify API Integration (pt. 2)",
+      date: "March 28, 2025",
       startTime: "7:00 PM",
       endTime: "8:00 PM",
       location: "Shillman 135",
     },
     {
-      title: "App Showcase",
-      date: "April 25, 2025",
+      title: "End of Semester Game Night",
+      date: "April 4, 2025",
       startTime: "7:00 PM",
       endTime: "8:00 PM",
       location: "Shillman 135",
