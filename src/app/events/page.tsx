@@ -4,6 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import { AnimatePresence, motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const EventsPage = () => {
   const currentDate = new Date(); // Get today's date
@@ -211,6 +212,7 @@ const EventsPage = () => {
           </motion.div>
         )}
       </motion.div>
+      <Footer />
     </div>
   );
 };

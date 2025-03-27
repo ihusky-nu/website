@@ -3,6 +3,7 @@
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const officers = [
   {
@@ -88,7 +89,7 @@ const OfficersPage = () => {
       </div>
 
       {/* Officers Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mx-auto max-w-5xl justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mx-auto max-w-5xl place-items-center">
         {officers.map((officer, index) => (
           <motion.div
             key={index}
@@ -147,6 +148,7 @@ const OfficersPage = () => {
           </motion.div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
