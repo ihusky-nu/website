@@ -90,7 +90,7 @@ const OfficersPage = () => {
       </div>
 
       {/* Officers Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mx-auto max-w-5xl place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 py-6 mx-auto max-w-6xl place-items-center auto-rows-fr">
         {officers.map((officer, index) => (
           <motion.div
             key={index}
