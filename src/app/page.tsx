@@ -1,6 +1,7 @@
 "use client";
 import NavBar from "./components/NavBar";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HomePage = () => {
   return (
@@ -29,7 +30,12 @@ const HomePage = () => {
         transition={{ duration: 1.0 }}
       >
         <div className="flex justify-center items-center md:items-end w-[80%] p-4 mt-6 border-[5px] border-black rounded-lg bg-black">
-          <img src="./images/animated.gif" alt="gif of iHusky logo"/>
+          <Image
+            src="/images/animated.gif"
+            alt="gif of iHusky logo"
+            width={500}
+            height={1000}
+          />
         </div>
       </motion.div>
 
