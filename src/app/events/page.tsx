@@ -36,12 +36,15 @@ const EventsPage = () => {
   ];
 
   // Split events into upcoming and past
-  const upcomingEvents = events.filter(
-    (event) => new Date(event.date) >= currentDate
-  );
-  const pastEvents = events.filter(
-    (event) => new Date(event.date) < currentDate
-  );
+  const upcomingEvents = events.filter((event) => {
+    const eventEndDateTime = new Date(`${event.date} ${event.endTime} EST`); // Ensure correct timezone
+    return eventEndDateTime >= currentDate;
+  });
+
+  const pastEvents = events.filter((event) => {
+    const eventEndDateTime = new Date(`${event.date} ${event.endTime} EST`); // Ensure correct timezone
+    return eventEndDateTime < currentDate;
+  });
 
   const [viewMode, setViewMode] = useState<"calendar" | "list">("calendar");
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
@@ -57,7 +60,7 @@ const EventsPage = () => {
   };
 
   return (
-    <div id="events">
+    <div id="events" className="flex flex-col min-h-screen">
       <NavBar />
 
       {/* Header with Events title and View Toggle */}
@@ -95,7 +98,7 @@ const EventsPage = () => {
 
       {/* View Toggle Animation */}
       <motion.div
-        className="flex items-center mb-4 w-full"
+        className="flex-grow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.0 }}
@@ -120,7 +123,9 @@ const EventsPage = () => {
                     `${event.date} ${event.startTime}`
                   ).toISOString(),
                   className:
-                    new Date(event.date) < currentDate ? "past-event" : "", // Mark past events
+                    new Date(`${event.date} ${event.endTime} EST`) < currentDate
+                      ? "past-event"
+                      : "",
                 }))}
                 eventClick={(info) => {
                   info.jsEvent.preventDefault();
@@ -144,7 +149,7 @@ const EventsPage = () => {
                 </h2>
                 <motion.ul
                   key="list"
-                  className="divide-y divide-gray-300 flex flex-col justify-center mx-auto text-left"
+                  className="divide-y divide-gray-300 flex flex-grow flex-col justify-center mx-auto text-left"
                   style={{ color: "rgb(29, 29, 31)" }}
                 >
                   {upcomingEvents.map((event, index) => (
@@ -170,7 +175,7 @@ const EventsPage = () => {
                     Past Events
                   </h2>
                   <motion.ul
-                    key="passed-list"
+                    key="past-list"
                     className="divide-y divide-gray-300 flex flex-col justify-center mx-auto text-left opacity-60"
                     style={{ color: "rgb(29, 29, 31)" }}
                   >
