@@ -167,7 +167,7 @@ const EventsPage = () => {
                   className="w-full max-w-2xl"
                 >
                   <h2 className="text-xl font-bold mt-6 text-left">
-                    Passed Events
+                    Past Events
                   </h2>
                   <motion.ul
                     key="passed-list"
