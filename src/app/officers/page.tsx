@@ -4,12 +4,13 @@ import { useState } from "react";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 const officers = [
   {
     name: "Caroline Pham",
     role: "President",
-    image: "./images/headshots/caroline_pham_headshot.jpeg",
+    image: "/images/headshots/caroline_pham_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/caroline-t-pham",
     year: "3rd Year",
     major: "Computer Science & Design",
@@ -18,7 +19,7 @@ const officers = [
   {
     name: "Nicole Contreras",
     role: "Vice President",
-    image: "./images/headshots/nicole_contreras_headshot.jpeg",
+    image: "/images/headshots/nicole_contreras_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/nicole-contreras-/",
     year: "3rd Year",
     major: "Computer Science & Business",
@@ -27,7 +28,7 @@ const officers = [
   {
     name: "Alan Zhang",
     role: "Club Coordinator",
-    image: "./images/headshots/alan_zhang_headshot.jpeg",
+    image: "/images/headshots/alan_zhang_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/alanlzhang/",
     year: "3rd Year",
     major: "Computer Science",
@@ -36,7 +37,7 @@ const officers = [
   {
     name: "Vidyuth Ramkumar",
     role: "Club Coordinator",
-    image: "./images/headshots/vidyuth_ramkumar_headshot.jpeg",
+    image: "/images/headshots/vidyuth_ramkumar_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/vidyuth-ramkumar/",
     year: "3rd Year",
     major: "Computer Science & Business",
@@ -45,7 +46,7 @@ const officers = [
   {
     name: "Allen Ehrhardt",
     role: "Club Consultant",
-    image: "./images/headshots/allen_ehrhardt_headshot.jpeg",
+    image: "/images/headshots/allen_ehrhardt_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/lehrhardt3559/",
     year: "3rd",
     major: "Computer Science",
@@ -54,7 +55,7 @@ const officers = [
   {
     name: "Lea Lang",
     role: "Lead UX Designer",
-    image: "./images/headshots/lea_lang_headshot.jpeg",
+    image: "/images/headshots/lea_lang_headshot.jpeg",
     linkedin: "https://www.linkedin.com/in/lea-lang-4263792a3/",
     year: "2nd Year",
     major: "Computer Science",
@@ -115,8 +116,10 @@ const OfficersPage = () => {
                   backfaceVisibility: "hidden",
                 }}
               >
-                <img
+                <Image
                   className="w-24 h-24 mb-3 rounded-full shadow-lg"
+                  width={24}
+                  height={24}
                   src={officer.image}
                   alt={`${officer.name} Headshot`}
                 />
@@ -124,10 +127,11 @@ const OfficersPage = () => {
                 <span className="text-sm text-gray-400">{officer.role}</span>
                 <div className="mt-4">
                   <a href={officer.linkedin} target="_blank">
-                    <img
-                      src="./images/linkedin.png"
+                    <Image
+                      src="/images/linkedin.png"
                       alt="LinkedIn logo"
-                      className="w-8 h-8"
+                      width={25}
+                      height={25}
                     />
                   </a>
                 </div>

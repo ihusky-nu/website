@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -12,9 +13,10 @@ const NavBar = () => {
             href="/home"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="./images/ihusky-logo.png"
-              className="h-8"
+            <Image
+              src="/images/ihusky-logo.png"
+              width={60}
+              height={40}
               alt="iHusky Logo"
             />
           </a>

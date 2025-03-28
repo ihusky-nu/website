@@ -2,24 +2,25 @@
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 const contactOptions = [
   {
     id: 1,
     title: "Join our Slack",
-    image: "./images/slack.png",
+    image: "/images/slack.png",
     link: "https://join.slack.com/t/ihusky-network/shared_invite/zt-2swv22htu-nhDLM1UoNh2tJrHJKH5kAw",
   },
   {
     id: 2,
     title: "Join our Mailing List",
-    image: "./images/mail.png",
+    image: "/images/mail.png",
     link: "https://forms.gle/v5kwATcWE54Bduro6",
   },
   {
     id: 3,
     title: "Send us an Email",
-    image: "./images/email.png",
+    image: "/images/email.png",
     link: "mailto:ihuskynu@gmail.com",
   },
 ];
@@ -65,11 +66,11 @@ const ContactPage = () => {
               whileTap={{ scale: 0.95 }}
             >
               <div className="flex-grow flex items-center justify-center">
-                <img
+                <Image
                   src={option.image}
                   alt={option.title}
-                  width="80"
-                  height="80"
+                  width={80}
+                  height={80}
                 />
               </div>
               <h2 className="mt-auto font-semibold text-lg">{option.title}</h2>

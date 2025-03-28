@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 const HomePage = () => {
   return (
@@ -31,7 +32,12 @@ const HomePage = () => {
         transition={{ duration: 1.0 }}
       >
         <div className="flex justify-center items-center md:items-end w-[80%] p-4 mt-6 border-[5px] border-black rounded-lg bg-black">
-          <img src="./images/animated.gif" alt="gif of iHusky logo"/>
+          <Image
+            src="/images/animated.gif"
+            alt="gif of iHusky logo"
+            width={500}
+            height={1000}
+          />
         </div>
       </motion.div>
 
@@ -43,7 +49,9 @@ const HomePage = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <h1 className="font-bold text-4xl" style={{ color: "rgb(29, 29, 31)" }}>Learn Swift and SwiftUI.</h1>
+        <h1 className="font-bold text-4xl" style={{ color: "rgb(29, 29, 31)" }}>
+          Learn Swift and SwiftUI.
+        </h1>
       </motion.div>
 
       {/* iHusky Benefits Section (Responsive Cards) */}
