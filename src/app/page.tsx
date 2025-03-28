@@ -17,7 +17,7 @@ const HomePage = () => {
           iHusky
         </h1>
         <h1 className="font-bold text-xl" style={{ color: "rgb(29, 29, 31)" }}>
-          Northeastern's iOS Development Club.
+          Northeastern&apos;s iOS Development Club.
         </h1>
       </motion.div>
 
@@ -29,7 +29,7 @@ const HomePage = () => {
         transition={{ duration: 1.0 }}
       >
         <div className="flex justify-center items-center md:items-end w-[80%] p-4 mt-6 border-[5px] border-black rounded-lg bg-black">
-          <img src="./images/animated.gif" />
+          <img src="./images/animated.gif" alt="gif of iHusky logo"/>
         </div>
       </motion.div>
 

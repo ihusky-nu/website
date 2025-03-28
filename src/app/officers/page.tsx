@@ -124,7 +124,11 @@ const OfficersPage = () => {
                 <span className="text-sm text-gray-400">{officer.role}</span>
                 <div className="mt-4">
                   <a href={officer.linkedin} target="_blank">
-                    <img src="./images/linkedin.png" className="w-8 h-8" />
+                    <img
+                      src="./images/linkedin.png"
+                      alt="LinkedIn logo"
+                      className="w-8 h-8"
+                    />
                   </a>
                 </div>
               </div>

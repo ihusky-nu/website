@@ -5,6 +5,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import { AnimatePresence, motion } from "framer-motion";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { EventClickArg } from "@fullcalendar/core";
+import { EventType } from "@/app/types";
 
 const EventsPage = () => {
   const currentDate = new Date(); // Get today's date
@@ -42,10 +44,10 @@ const EventsPage = () => {
   );
 
   const [viewMode, setViewMode] = useState<"calendar" | "list">("calendar");
-  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
 
   // Function to handle event clicks
-  const handleEventClick = (clickInfo: any) => {
+  const handleEventClick = (clickInfo: EventClickArg) => {
     const clickedEvent = events.find(
       (event) => event.title === clickInfo.event.title
     );
